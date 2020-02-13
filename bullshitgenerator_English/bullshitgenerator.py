@@ -50,6 +50,9 @@ def clean(a):
             lst[i+1] = lst[i+1].lower()
     return ' '.join(lst)
 
-tmp = generator('brexit',10000)
+theme = input("Please input your theme(default: brexit): ")
+if(theme == ""):
+    theme = 'brexit'
+tmp = generator(theme,10000)
 tmp = clean(tmp)
 print(tmp)
